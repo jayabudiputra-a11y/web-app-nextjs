@@ -13,5 +13,3 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Failed to fetch news' }, { status: 500 });
   }
 }
-
-export const dynamic = 'force-dynamic';
