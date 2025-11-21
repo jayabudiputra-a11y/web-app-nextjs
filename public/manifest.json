@@ -1,0 +1,27 @@
+{
+  "name": "Portal Berita Google",
+  "short_name": "NewsPortal",
+  "description": "Portal berita terkini tentang Google dengan fokus pada berita ekonomi dan keuangan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/futuristic-digital-news-logo-with-angular-shapes--.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/futuristic-digital-news-logo-with-angular-shapes-- (1).png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/futuristic-digital-news-logo-with-angular-shapes-- (2).png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

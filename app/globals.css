@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ============================
+   🎨 Global Theme Variables
+============================ */
+:root {
+  --foreground: #1a1a1a;
+  --background-gradient: linear-gradient(135deg, #ffffff, #dfe9ff);
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --card-border: rgba(255, 255, 255, 0.25);
+}
+
+/* 🌙 Dark Mode Auto Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f2f2f2;
+    --background-gradient: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    --card-bg: rgba(20, 20, 20, 0.6);
+    --card-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ============================
+   🧍 Global Body Styling
+============================ */
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background-gradient);
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ============================
+   🧊 Glassmorphism Utility
+============================ */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+}
+
+/* ============================
+   🔤 Typography
+============================ */
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 80px;
+  font-weight: 700;
+}
+
+/* ============================
+   🧩 Layout Helpers
+============================ */
+.container-soft {
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ============================
+   ⚙️ Tailwind Utilities Layer
+============================ */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+}
