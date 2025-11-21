@@ -80,7 +80,7 @@ export default async function Home(props: PageProps) {
   const query =
     userQuery || `Google topic:"financial and economic news"`;
 
-  const newsResponse = await fetchNewsExternal(query, process.env.NEXT_PUBLIC_API_TOKEN);
+  const newsResponse = await fetchNewsExternal(query);
 
   // Pastikan type sesuai NewsResponse
   const allTags: string[] = newsResponse.posts.flatMap(
