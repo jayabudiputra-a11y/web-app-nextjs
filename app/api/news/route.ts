@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     const query = searchParams.get('q') || 'Google topic:"financial and economic news" sentiment:negative';
     const ts = searchParams.get('ts') || undefined;
 
-    const data = await fetchNewsExternal(query, ts);
+    const data = await fetchNewsExternal(query);
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch news' }, { status: 500 });
